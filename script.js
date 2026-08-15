@@ -1,7 +1,7 @@
 /**
  * ASHISH KUNTAL — PORTFOLIO CLIENT ENGINE
- * Handles interactive sparrow dynamics, project filtering, ambient cursor lighting,
- * and contact interactions.
+ * Handles realistic forward-flying avian dynamics, interactive project architecture modals,
+ * category filtering, ambient lighting, and contact interactions.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // 3. Mobile Navigation Menu Toggle
+  // 4. Mobile Navigation Menu Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
   if (mobileToggle && navMenu) {
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close on nav link click
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Active Navigation Observer
+  // 5. Active Navigation Observer
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
   
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(sec => navObserver.observe(sec));
 
-  // 5. Interactive Project Filtering
+  // 6. Interactive Project Filtering (Comugle, RAG Pipeline, Offline Tourist)
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -103,10 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.opacity = '0';
           card.style.transform = 'translateY(15px)';
           setTimeout(() => {
-            card.style.transition = 'all 0.4s ease';
+            card.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-          }, 50);
+          }, 40);
         } else {
           card.style.display = 'none';
         }
@@ -114,7 +113,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Direct Email Copy to Clipboard Interaction
+  // 7. Interactive System Architecture Modals
+  const openModalBtns = document.querySelectorAll('.btn-open-arch-modal');
+  const modalOverlays = document.querySelectorAll('.arch-modal-overlay');
+  const closeModalBtns = document.querySelectorAll('.modal-close-btn');
+
+  const openModal = (modalId) => {
+    const targetModal = document.getElementById(modalId);
+    if (targetModal) {
+      targetModal.classList.add('open');
+      targetModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // Lock scroll
+    }
+  };
+
+  const closeModal = (modal) => {
+    if (modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // Restore scroll
+    }
+  };
+
+  openModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-modal');
+      if (modalId) openModal(modalId);
+    });
+  });
+
+  closeModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = btn.closest('.arch-modal-overlay');
+      closeModal(modal);
+    });
+  });
+
+  modalOverlays.forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeModal(overlay);
+      }
+    });
+  });
+
+  // Close on Escape Key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modalOverlays.forEach(overlay => {
+        if (overlay.classList.contains('open')) {
+          closeModal(overlay);
+        }
+      });
+    }
+  });
+
+  // 8. Direct Email Copy to Clipboard Interaction
   const contactEmailBtn = document.getElementById('contactEmailBtn');
   const copyBadge = document.getElementById('copyBadge');
   const emailDisplay = document.getElementById('emailAddressDisplay');
@@ -134,90 +188,38 @@ document.addEventListener('DOMContentLoaded', () => {
           copyBadge.classList.remove('copied');
         }, 2200);
       } catch (err) {
-        // Fallback: trigger mailto
         window.location.href = `mailto:${emailToCopy}`;
       }
     });
   }
 
-  // 7. Interactive Contact Form Submission
-  const contactForm = document.getElementById('contactForm');
-  const formSubmitBtn = document.getElementById('formSubmitBtn');
-  const formStatusMsg = document.getElementById('formStatusMsg');
-
-  if (contactForm && formSubmitBtn && formStatusMsg) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('formName')?.value.trim();
-      const email = document.getElementById('formEmail')?.value.trim();
-      const subject = document.getElementById('formSubject')?.value.trim();
-      const message = document.getElementById('formMessage')?.value.trim();
-
-      if (!name || !email || !message) {
-        formStatusMsg.textContent = 'Please fill out all required fields.';
-        formStatusMsg.className = 'form-status-msg';
-        formStatusMsg.style.display = 'block';
-        formStatusMsg.style.background = 'rgba(239, 68, 68, 0.15)';
-        formStatusMsg.style.borderColor = '#ef4444';
-        formStatusMsg.style.color = '#fca5a5';
-        return;
-      }
-
-      // Simulate instantaneous submission state
-      const originalBtnHtml = formSubmitBtn.innerHTML;
-      formSubmitBtn.innerHTML = '<span>Transmitting...</span>';
-      formSubmitBtn.disabled = true;
-
-      setTimeout(() => {
-        formSubmitBtn.innerHTML = '<span>✓ Message Sent!</span>';
-        formSubmitBtn.style.background = '#22c55e';
-        formSubmitBtn.style.color = '#070709';
-
-        formStatusMsg.textContent = `Thank you, ${name}! Your message has been sent directly to Ashish Kuntal. I will get back to you shortly.`;
-        formStatusMsg.className = 'form-status-msg success';
-
-        contactForm.reset();
-
-        setTimeout(() => {
-          formSubmitBtn.innerHTML = originalBtnHtml;
-          formSubmitBtn.style.background = '';
-          formSubmitBtn.style.color = '';
-          formSubmitBtn.disabled = false;
-        }, 4000);
-      }, 700);
-    });
-  }
-
-  // 8. Dynamic Copyright Year
+  // 9. Dynamic Copyright Year
   const yearEl = document.getElementById('currentYear');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 9. Neural Pulse Tooltip & Interactive Highlight
+  // 11. Neural Pulse Tooltip
   const neuralPulses = document.querySelectorAll('.neural-pulse');
   neuralPulses.forEach(pulse => {
     pulse.addEventListener('mouseenter', () => {
-      const tooltip = pulse.getAttribute('data-tooltip');
-      if (tooltip) {
-        pulse.style.transform = 'scale(1.35)';
-      }
+      pulse.style.transform = 'scale(1.35)';
     });
     pulse.addEventListener('mouseleave', () => {
       pulse.style.transform = 'scale(1)';
     });
   });
 
-  // 10. Interactive Sparrow Nudge on Brand Hover
+  // 12. Interactive Avian Speed Boost on Brand Hover
   const brandLogo = document.getElementById('navBrandLogo');
-  const sparrowFlyer = document.getElementById('sparrowFlyer');
-  if (brandLogo && sparrowFlyer) {
+  const navAvianFlyer = document.getElementById('navAvianFlyer');
+  if (brandLogo && navAvianFlyer) {
     brandLogo.addEventListener('mouseenter', () => {
-      sparrowFlyer.style.animationDuration = '1.8s';
+      navAvianFlyer.style.filter = 'drop-shadow(0 0 16px rgba(212, 175, 55, 0.8))';
     });
     brandLogo.addEventListener('mouseleave', () => {
-      sparrowFlyer.style.animationDuration = '3.8s';
+      navAvianFlyer.style.filter = 'drop-shadow(0 2px 8px rgba(212, 175, 55, 0.35))';
     });
   }
 });
+
