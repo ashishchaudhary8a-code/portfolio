@@ -3,1053 +3,597 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashish Kuntal | Full Stack Engineer & AI Systems Architect</title>
-  <meta name="description" content="Official portfolio of Ashish Kuntal — Full Stack Engineer & AI Systems Architect bridging human cognitive intellect with high-velocity software engineering." />
+  <title>Ashish Kuntal | Senior Software Engineer &amp; AI Systems Architect</title>
+  <meta name="description" content="Portfolio of Ashish Kuntal — Senior Software Engineer specializing in scalable web systems, distributed AI, real-time WebRTC, and mission-critical offline applications." />
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/icons/sparrow.svg" />
+  <link rel="icon" type="image/svg+xml" href="C:\Users\Dell\OneDrive\Desktop\workspace\portfolio\assets\icons\cat.png" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Modern Gen-Z Editorial Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-theme">
-  <!-- Interactive Ambient Background Glows -->
-  <div class="ambient-glow glow-top" id="ambientGlowTop"></div>
-  <div class="ambient-glow glow-middle" id="ambientGlowMid"></div>
-  <div class="ambient-cursor" id="ambientCursor"></div>
+<body class="theme-monochrome">
 
-  <!-- Top Navigation Bar -->
-  <header class="site-header" id="siteHeader">
-    <div class="nav-container">
-      <!-- Brand Logo with Forward-Facing Majestic Soaring Avian -->
-      <a href="#hero" class="brand-logo" id="navBrandLogo" aria-label="Ashish Kuntal Home">
-        <div class="avian-emblem-stage" title="Ashish Kuntal — Avian Precision">
-          <div class="avian-flyer" id="navAvianFlyer">
-            <svg class="avian-svg" viewBox="0 0 120 90" fill="none">
-              <defs>
-                <linearGradient id="navBirdBodyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-                  <stop offset="0%" stop-color="#ffffff" />
-                  <stop offset="60%" stop-color="#cbd5e1" />
-                  <stop offset="100%" stop-color="#d4af37" />
-                </linearGradient>
-                <linearGradient id="navWingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#ffffff" />
-                  <stop offset="50%" stop-color="#e2e8f0" />
-                  <stop offset="100%" stop-color="#94a3b8" />
-                </linearGradient>
-              </defs>
-              <g class="avian-tail-feathers">
-                <path d="M 57 58 L 60 84 L 63 58 Z" fill="#94a3b8" opacity="0.85" />
-                <path d="M 55 58 L 52 82 L 58 60 Z" fill="#cbd5e1" />
-                <path d="M 65 58 L 68 82 L 62 60 Z" fill="#cbd5e1" />
-              </g>
-              <g class="avian-wing-left">
-                <path d="M 50 32 C 36 26, 22 24, 4 28 C 10 32, 24 33, 40 38 Z" fill="#ffffff" />
-                <path d="M 48 34 C 32 29, 18 31, 2 37 C 10 40, 24 40, 42 42 Z" fill="url(#navWingGrad)" />
-                <path d="M 46 36 C 30 35, 16 40, 3 47 C 12 48, 26 46, 44 45 Z" fill="#cbd5e1" />
-                <path d="M 44 40 C 30 42, 20 48, 8 57 C 18 55, 30 51, 46 48 Z" fill="#94a3b8" />
-                <path d="M 50 32 C 34 25, 18 24, 4 28" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round" />
-              </g>
-              <g class="avian-wing-right">
-                <path d="M 70 32 C 84 26, 98 24, 116 28 C 110 32, 96 33, 80 38 Z" fill="#ffffff" />
-                <path d="M 72 34 C 88 29, 102 31, 118 37 C 110 40, 96 40, 78 42 Z" fill="url(#navWingGrad)" />
-                <path d="M 74 36 C 90 35, 104 40, 117 47 C 108 48, 94 46, 76 45 Z" fill="#cbd5e1" />
-                <path d="M 76 40 C 90 42, 100 48, 112 57 C 102 55, 90 51, 74 48 Z" fill="#94a3b8" />
-                <path d="M 70 32 C 86 25, 102 24, 116 28" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round" />
-              </g>
-              <g class="avian-torso">
-                <path d="M 54 28 C 50 34, 48 46, 52 60 C 56 66, 64 66, 68 60 C 72 46, 70 34, 66 28 C 63 24, 57 24, 54 28 Z" fill="url(#navBirdBodyGrad)" />
-                <path d="M 54 36 Q 60 40 66 36" stroke="#d4af37" stroke-width="0.8" opacity="0.6" fill="none" />
-                <path d="M 53 43 Q 60 48 67 43" stroke="#d4af37" stroke-width="0.8" opacity="0.6" fill="none" />
-              </g>
-              <g class="avian-head">
-                <path d="M 54 26 C 53 18, 56 12, 60 12 C 64 12, 67 18, 66 26 C 64 28, 56 28, 54 26 Z" fill="#ffffff" />
-                <polygon points="58,16 62,16 60,6" fill="#f59e0b" />
-                <polygon points="59,16 61,16 60,7" fill="#fef08a" />
-                <circle cx="56.5" cy="18" r="1.4" fill="#09090b" />
-                <circle cx="63.5" cy="18" r="1.4" fill="#09090b" />
-              </g>
-            </svg>
-          </div>
+  <!-- Ambient Grain Overlay & Dynamic Cursor Spotlight -->
+  <div class="ambient-spotlight" id="ambientSpotlight"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       LEFT-SIDE JOURNEY PATH RAIL (Interactive Waypoint Controller)
+       ========================================================================= -->
+  <aside class="journey-rail" id="journeyRail" aria-label="Portfolio Journey Path">
+    <!-- Journey Header -->
+    
+
+    <!-- Active Trajectory Status Card -->
+    <!-- <div class="trajectory-status-card" id="trajectoryStatusCard">
+      <div class="trajectory-status-top">
+        <span class="trajectory-state-tag" id="trajectoryStateTag">LIVE</span>
+      </div>
+      <p class="trajectory-current-heading" id="trajectoryCurrentHeading">OVERVIEW</p>
+      <div class="trajectory-next-hint">
+        <span class="hint-arrow">↳</span>
+        <span id="trajectoryNextText">Approaching: Skill Set</span>
+      </div>
+    </div> -->
+
+    <!-- Vertical Path Track with Nodes -->
+    <div class="path-track-container">
+      <!-- Background Guide Line -->
+      <div class="path-guide-line"></div>
+      <!-- Glowing Animated Fill Line that tracks travel -->
+      <div class="path-active-fill" id="pathActiveFill"></div>
+
+      <!-- Waypoint 01: Overview -->
+      <a href="#hero" class="path-node is-active" data-section="hero" data-label="OVERVIEW">
+        <div class="node-bullet">
+          <span class="bullet-inner"></span>
         </div>
-        <div class="brand-text">
-          <span class="brand-name">ASHISH KUNTAL</span>
-          <span class="brand-sub">ENGINEERING &amp; AI</span>
+        <div class="node-meta">
+          <span class="node-name">OVERVIEW</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Menu -->
-      <nav class="nav-menu" id="navMenu">
-        <ul class="nav-links">
-          <li><a href="#hero" class="nav-link active">About</a></li>
-          <li><a href="#philosophy" class="nav-link">Brain &amp; Tech</a></li>
-          <li><a href="#works" class="nav-link">Projects</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#skills" class="nav-link">Stack</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Nav Actions -->
-      <div class="nav-actions">
-        <div class="status-indicator" title="Available for Select Roles &amp; Collaborations">
-          <span class="status-dot"></span>
-          <span class="status-text">Available</span>
+      <!-- Waypoint 02: Skill Set -->
+      <a href="#skills" class="path-node" data-section="skills" data-label="SKILL SET">
+        <div class="node-bullet">
+          <span class="bullet-inner"></span>
         </div>
-        <a href="#contact" class="btn btn-sm btn-gold">Let's Connect</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+        <div class="node-meta">
+          <span class="node-name">SKILL SET</span>
+        </div>
+      </a>
+
+      <!-- Waypoint 03: Projects -->
+      <a href="#projects" class="path-node" data-section="projects" data-label="PROJECTS">
+        <div class="node-bullet">
+          <span class="bullet-inner"></span>
+        </div>
+        <div class="node-meta">
+          <span class="node-name">PROJECTS</span>
+        </div>
+      </a>
+
+      <!-- Waypoint 04: Let's Talk -->
+      <a href="#contact" class="path-node" data-section="contact" data-label="LET'S TALK">
+        <div class="node-bullet">
+          <span class="bullet-inner"></span>
+        </div>
+        <div class="node-meta">
+          <span class="node-name">LET'S TALK</span>
+        </div>
+      </a>
     </div>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="hero">
-      <div class="hero-container">
+    
+  </aside>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main class="page-main-layout" id="mainContent">
+
+    <!-- =======================================================================
+         HERO SECTION (OVERVIEW)
+         ======================================================================= -->
+    <section class="stage-section hero-section" id="hero" data-stage-title="OVERVIEW" data-next-stage="SKILL SET">
+      
+      <!-- Split Hero Grid: Content & Profile Card -->
+      <div class="hero-grid">
         
-        <!-- Left Column: Copy & Presentation -->
-        <div class="hero-content">
-          <!-- Avian & Brand Signature Topmark -->
-          <div class="hero-signature-mark">
-            <div class="hero-sparrow-container">
-              <div class="hero-avian-stage">
-                <div class="avian-flyer hero-avian-flyer" id="heroAvianFlyer">
-                  <svg class="avian-svg" viewBox="0 0 120 90" fill="none">
-                    <defs>
-                      <linearGradient id="heroBirdBodyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-                        <stop offset="0%" stop-color="#ffffff" />
-                        <stop offset="55%" stop-color="#f1f5f9" />
-                        <stop offset="100%" stop-color="#d4af37" />
-                      </linearGradient>
-                      <linearGradient id="heroWingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#ffffff" />
-                        <stop offset="50%" stop-color="#e2e8f0" />
-                        <stop offset="85%" stop-color="#94a3b8" />
-                        <stop offset="100%" stop-color="#d4af37" />
-                      </linearGradient>
-                    </defs>
-                    <g class="avian-tail-feathers">
-                      <path d="M 57 58 L 60 84 L 63 58 Z" fill="#94a3b8" opacity="0.85" />
-                      <path d="M 55 58 L 52 82 L 58 60 Z" fill="#cbd5e1" />
-                      <path d="M 65 58 L 68 82 L 62 60 Z" fill="#cbd5e1" />
-                    </g>
-                    <g class="avian-wing-left">
-                      <path d="M 50 32 C 36 26, 22 24, 4 28 C 10 32, 24 33, 40 38 Z" fill="#ffffff" />
-                      <path d="M 48 34 C 32 29, 18 31, 2 37 C 10 40, 24 40, 42 42 Z" fill="url(#heroWingGrad)" />
-                      <path d="M 46 36 C 30 35, 16 40, 3 47 C 12 48, 26 46, 44 45 Z" fill="#cbd5e1" />
-                      <path d="M 44 40 C 30 42, 20 48, 8 57 C 18 55, 30 51, 46 48 Z" fill="#94a3b8" />
-                      <path d="M 50 32 C 34 25, 18 24, 4 28" stroke="#d4af37" stroke-width="1.4" stroke-linecap="round" />
-                    </g>
-                    <g class="avian-wing-right">
-                      <path d="M 70 32 C 84 26, 98 24, 116 28 C 110 32, 96 33, 80 38 Z" fill="#ffffff" />
-                      <path d="M 72 34 C 88 29, 102 31, 118 37 C 110 40, 96 40, 78 42 Z" fill="url(#heroWingGrad)" />
-                      <path d="M 74 36 C 90 35, 104 40, 117 47 C 108 48, 94 46, 76 45 Z" fill="#cbd5e1" />
-                      <path d="M 76 40 C 90 42, 100 48, 112 57 C 102 55, 90 51, 74 48 Z" fill="#94a3b8" />
-                      <path d="M 70 32 C 86 25, 102 24, 116 28" stroke="#d4af37" stroke-width="1.4" stroke-linecap="round" />
-                    </g>
-                    <g class="avian-torso">
-                      <path d="M 54 28 C 50 34, 48 46, 52 60 C 56 66, 64 66, 68 60 C 72 46, 70 34, 66 28 C 63 24, 57 24, 54 28 Z" fill="url(#heroBirdBodyGrad)" />
-                      <path d="M 54 36 Q 60 40 66 36" stroke="#d4af37" stroke-width="0.8" opacity="0.6" fill="none" />
-                      <path d="M 53 43 Q 60 48 67 43" stroke="#d4af37" stroke-width="0.8" opacity="0.6" fill="none" />
-                    </g>
-                    <g class="avian-head">
-                      <path d="M 54 26 C 53 18, 56 12, 60 12 C 64 12, 67 18, 66 26 C 64 28, 56 28, 54 26 Z" fill="#ffffff" />
-                      <polygon points="58,16 62,16 60,6" fill="#f59e0b" />
-                      <polygon points="59,16 61,16 60,7" fill="#fef08a" />
-                      <circle cx="56.5" cy="18" r="1.4" fill="#09090b" />
-                      <circle cx="63.5" cy="18" r="1.4" fill="#09090b" />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <h2 class="hero-name-stamp">ASHISH KUNTAL</h2>
-          </div>
+        <!-- Column A: Bio, Pitch & Direct Section Portals -->
+        <div class="hero-narrative-col">
+          
+          
 
-          <!-- Main Hero Title -->
+          <!-- Monumental Gen-Z Headline -->
           <h1 class="hero-main-title">
-            FULL STACK ENGINEER &amp; <span class="gold-accent-text">AI SYSTEMS ARCHITECT</span>
+            ENGINEERING FAST,
+            <span class="title-stroke">SATISFYING</span>
+            &amp; RESILIENT CODE.
           </h1>
 
-          <!-- Value Proposition Statement (Present Tense, Confident, Refined) -->
-          <p class="hero-description">
-            High-impact software engineer fusing deep <strong>first-principles architectural thinking</strong> with modern <strong>AI workflows and full-stack engineering</strong>. I architect resilient cloud systems, autonomous agentic pipelines, and intuitive interfaces — from strategic system design to robust production execution.
+          <!-- Value Proposition Pitch -->
+          <p class="hero-lead-pitch">
+            I'm Ashish, a passionate Web Developer and Data Science enthusiast. I build modern, responsive, and user-friendly websites and web applications using technologies exist around us. From turning your idea into a polished digital product to building APIs and data-driven solutions, I focus on clean code, great user experience, and reliable communication.<strong class = "text-white">Let's work together to bring your vision to life!</strong>.
           </p>
 
-          <!-- Action CTA Group -->
-          <div class="hero-cta-group">
-            <a href="#works" class="btn btn-gold btn-lg">Explore Selected Works</a>
-            <a href="#philosophy" class="btn btn-outline btn-lg">Cognitive AI Philosophy</a>
-          </div>
-
-          <!-- Signature Ribbon Badges (Modern Tech & Core Competencies) -->
-          <div class="hero-ribbons-wrapper">
-            <div class="ribbon-label">Core Capabilities &amp; Stack:</div>
-            <div class="ribbon-tags-list">
-              <div class="ribbon-tag" title="Full Stack Web Architecture">
-                <span class="ribbon-icon">⚡</span>
-                <span class="ribbon-text">Full Stack</span>
-              </div>
-              <div class="ribbon-tag" title="Artificial Intelligence & LLMs">
-                <span class="ribbon-icon">🧠</span>
-                <span class="ribbon-text">AI &amp; LLMs</span>
-              </div>
-              <div class="ribbon-tag" title="React & Next.js Ecosystem">
-                <span class="ribbon-icon">⚛️</span>
-                <span class="ribbon-text">React / Next.js</span>
-              </div>
-              <div class="ribbon-tag" title="Python & FastAPI">
-                <span class="ribbon-icon">🐍</span>
-                <span class="ribbon-text">Python / APIs</span>
-              </div>
-              <div class="ribbon-tag" title="TypeScript & Node.js">
-                <span class="ribbon-icon">🔷</span>
-                <span class="ribbon-text">TypeScript</span>
-              </div>
-              <div class="ribbon-tag" title="Distributed Systems & Cloud">
-                <span class="ribbon-icon">☁️</span>
-                <span class="ribbon-text">Cloud &amp; DevOps</span>
-              </div>
-              <div class="ribbon-tag" title="Design Systems & UI Engineering">
-                <span class="ribbon-icon">🎨</span>
-                <span class="ribbon-text">Design Systems</span>
-              </div>
+          <!-- Metric & Quality Markers Strip -->
+          <div class="hero-metrics-strip">
+            <div class="metric-cell">
+              <span class="metric-num">04</span>
+              <span class="metric-label">Flagship Architectures</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-cell">
+              <span class="metric-num">100%</span>
+              <span class="metric-label">Monochrome Contrast</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-cell">
+              <span class="metric-num">0.0s</span>
+              <span class="metric-label">Zero-Data Offline Fallback</span>
             </div>
           </div>
 
+
+          <!-- Core Stack Micro-Marquee -->
+          <div class="hero-stack-microbar">
+            <span class="stack-micro-label">STACK FOCUS:</span>
+            <div class="stack-tags-list">
+              <span class="stack-chip">TypeScript</span>
+              <span class="stack-chip">Python</span>
+              <span class="stack-chip">WebRTC</span>
+              <span class="stack-chip">WebSocket</span>
+              <span class="stack-chip">RAG</span>
+              <span class="stack-chip">Docker</span>
+              <span class="stack-chip">Redis</span>
+              <span class="stack-chip">MongoDB</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Right Column: Charismatic Studio Portrait -->
-        <div class="hero-portrait-column">
-          <div class="portrait-stage-wrapper">
-            <!-- Studio Ambient Halo -->
-            <div class="portrait-glow-halo"></div>
+        <!-- Column B: Modern Gen-Z Profile Visual Showpiece -->
+        <div class="hero-profile-col">
+          <div class="profile-card-stage" id="profileCardStage">
             
-            <!-- Main Portrait Frame -->
-            <div class="portrait-frame">
-              <img 
-                src="assets/images/ashish_hero_studio.png" 
-                alt="Ashish Kuntal — Full Stack Engineer and AI Systems Architect" 
-                class="portrait-img" 
-                id="heroPortraitImg"
-              />
-              <div class="portrait-gradient-overlay"></div>
-            </div>
-
-            <!-- Floating Badge Card 1 -->
-            <div class="floating-badge badge-top-right">
-              <div class="badge-icon-box">🧠</div>
-              <div class="badge-content">
-                <div class="badge-title">Cognitive Synergy</div>
-                <div class="badge-sub">Human Logic + AI Speed</div>
-              </div>
-            </div>
-
-            <!-- Floating Badge Card 2 -->
-            <div class="floating-badge badge-bottom-left">
-              <div class="badge-icon-box">⚡</div>
-              <div class="badge-content">
-                <div class="badge-title">Production Velocity</div>
-                <div class="badge-sub">Scalable &amp; Zero-Debt</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div class="scroll-down-prompt">
-        <a href="#philosophy" aria-label="Scroll to philosophy section">
-          <span class="scroll-mouse">
-            <span class="scroll-wheel"></span>
-          </span>
-          <span class="scroll-text">Explore Synergy</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- COGNITIVE SYNERGY / BRAIN & TECH SECTION -->
-    <section class="philosophy-section" id="philosophy">
-      <div class="section-container">
-        
-        <!-- Section Header -->
-        <div class="section-header-centered">
-          <span class="section-badge">ENGINEERING PERSPECTIVE</span>
-          <h2 class="section-heading">Cognitive Synergy: <span class="gold-accent-text">Intellect &amp; Machine Code</span></h2>
-          <p class="section-subheading">
-            How I orchestrate the interface between deep human architectural judgment and high-velocity AI computation.
-          </p>
-        </div>
-
-        <!-- Philosophy Main Feature Box -->
-        <div class="brain-tech-card">
-          
-          <!-- Left: Interactive Brain & Circuit Visualization -->
-          <div class="brain-visual-pane">
-            <div class="brain-illustration-wrapper">
-              <img 
-                src="assets/images/brain_graphic.png" 
-                alt="Human Brain and Microprocessor Circuit Diagram" 
-                class="brain-graphic-img" 
-                id="brainGraphicImg"
-              />
-              <!-- Interactive Neural Hotspots -->
-              <div class="neural-pulse pulse-left" data-tooltip="Human Strategic Clarity & Cognitive Intuition">
-                <span class="pulse-ring"></span>
-                <span class="pulse-core"></span>
-              </div>
-              <div class="neural-pulse pulse-right" data-tooltip="Algorithmic Speed, Autonomous Agents & Machine Precision">
-                <span class="pulse-ring ring-blue"></span>
-                <span class="pulse-core core-blue"></span>
-              </div>
-              <div class="neural-pulse pulse-center" data-tooltip="The Synthesis: Robust Production Systems">
-                <span class="pulse-ring ring-gold"></span>
-                <span class="pulse-core core-gold"></span>
-              </div>
-            </div>
-
-            <!-- Dual Hemisphere Indicator -->
-            <div class="hemisphere-legend">
-              <div class="legend-item">
-                <span class="legend-dot dot-white"></span>
-                <span>Human Intuition &amp; System Architecture</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-dot dot-blue"></span>
-                <span>AI Velocity &amp; Deterministic Execution</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Clear Architectural Manifesto -->
-          <div class="brain-text-pane">
-            <h3 class="manifesto-title">Thoughts on AI as an Engineering &amp; Design Discipline</h3>
-            <div class="manifesto-lead">
-              Artificial intelligence evolves fast. New LLMs and automated tools appear daily, promising lightning-fast workflows and instant output.
-            </div>
-
-            <div class="manifesto-body">
-              <p>
-                In modern digital product engineering, the critical interface lies between <strong>strategic architecture and clean execution</strong>. Well-structured design systems, modular pattern libraries, and robust API contracts can be seamlessly synthesized through modern design-to-code pipelines — converting human vision into performant code for ecosystems such as React, Next.js, Python, and cloud microservices.
-              </p>
+            <!-- Card Outer Border Frame with Glass Glow -->
+            <div class="profile-frame" id="profileFrame">
               
-              <div class="highlight-quote-box">
-                <div class="quote-bar"></div>
-                <p class="quote-content">
-                  "The real lever is never the tool alone. It is the <strong>clarity of the cognitive structure</strong>, the rigorous foundation of the system, and the deliberate strategic intent behind it."
-                </p>
-              </div>
-
-              <p>
-                AI accelerates production and amplifies consistency. But feeding generic strategy into an automated generator will never yield a breakthrough system.
-              </p>
-
-              <p>
-                High availability, sub-millisecond latencies, strong KPIs, and meaningful OKRs are achieved long before automation runs — through <strong>rigorous analytical thinking</strong>, precise architectural decisions, and a deep understanding of user psychology. AI magnifies engineering leverage. <em>Direction and architectural integrity remain my human responsibility.</em>
-              </p>
-            </div>
-
-            <!-- 3 Synergy Metric Cards -->
-            <div class="synergy-metrics-grid">
-              <div class="synergy-stat">
-                <div class="stat-number">10<span class="stat-gold">x</span></div>
-                <div class="stat-label">Execution Velocity with AI Tooling</div>
-              </div>
-              <div class="synergy-stat">
-                <div class="stat-number">100<span class="stat-gold">%</span></div>
-                <div class="stat-label">Architectural Rigor &amp; Intent</div>
-              </div>
-              <div class="synergy-stat">
-                <div class="stat-number">0<span class="stat-gold">px</span></div>
-                <div class="stat-label">Design-to-Code Fidelity</div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SELECTED WORKS / PROJECTS SECTION -->
-    <section class="works-section" id="works">
-      <div class="section-container">
-        
-        <div class="section-header-flex">
-          <div>
-            <span class="section-badge">CURATED PORTFOLIO</span>
-            <h2 class="section-heading">Featured <span class="gold-accent-text">Engineering Works</span></h2>
-          </div>
-          <!-- Filter Buttons -->
-          <div class="project-filters" id="projectFilters">
-            <button class="filter-btn active" data-filter="all">All Systems (3)</button>
-            <button class="filter-btn" data-filter="realtime">Real-Time Full Stack</button>
-            <button class="filter-btn" data-filter="ai">AI &amp; RAG</button>
-            <button class="filter-btn" data-filter="offline">Offline &amp; PWA</button>
-          </div>
-        </div>
-
-        <!-- Projects Grid (Ashish's 3 Core Real Projects) -->
-        <div class="projects-grid">
-          
-          <!-- Project 1: Comugle -->
-          <article class="project-card" data-category="realtime fullstack">
-            <div class="project-card-header">
-              <div class="project-type-tag">Real-Time Platform &amp; Sockets</div>
-              <div class="project-date">Render + Vercel Live</div>
-            </div>
-            <h3 class="project-title">Comugle — Full-Stack Real-Time Matchmaking Platform</h3>
-            <p class="project-desc">
-              A full-stack real-time communication platform featuring user matchmaking, real-time Socket.io communication, authentication, online-user tracking, live statistics, and automated moderation logic.
-            </p>
-            <ul class="project-highlights-list">
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">⚡</span>
-                <span><strong>In-Memory Queue Engine:</strong> State structures (<code>otpStore</code>, <code>queue</code>, <code>onlineUsers</code>) for sub-50ms matchmaking and active user tracking.</span>
-              </li>
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">🛡️</span>
-                <span><strong>Automated Moderation System:</strong> Custom threshold algorithm (0.6 report ratio, min 5 connections) triggering automated 7-day restriction bans.</span>
-              </li>
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">📊</span>
-                <span><strong>Live Telemetry:</strong> <code>broadcastStats</code> engine streaming live room volumes and connection health directly to connected clients.</span>
-              </li>
-            </ul>
-            <div class="project-tech-pills">
-              <span class="tech-pill">React</span>
-              <span class="tech-pill">Node.js / Express</span>
-              <span class="tech-pill">Socket.io</span>
-              <span class="tech-pill">MongoDB &amp; Mongoose</span>
-              <span class="tech-pill">JWT &amp; Nodemailer OTP</span>
-              <span class="tech-pill">Render &amp; Vercel</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn-open-arch-modal" data-modal="modal-comugle" aria-label="Explore Comugle System Architecture">
-                <span>Explore Architecture &amp; Pipeline</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <span class="project-metric">Sub-50ms Socket Sync</span>
-            </div>
-          </article>
-
-          <!-- Project 2: Production-Oriented RAG System -->
-          <article class="project-card" data-category="ai rag">
-            <div class="project-card-header">
-              <div class="project-type-tag">AI Systems &amp; Semantic Vector Store</div>
-              <div class="project-date">Phase 2 Done / Phase 3 Arch</div>
-            </div>
-            <h3 class="project-title">Production-Oriented RAG Pipeline</h3>
-            <p class="project-desc">
-              A production-oriented Retrieval-Augmented Generation system that processes documents, converts their content into semantic vector representations, retrieves relevant context using a vector store, and uses that context to generate grounded responses.
-            </p>
-            <ul class="project-highlights-list">
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">🧠</span>
-                <span><strong>Semantic Vector Embeddings:</strong> High-density tokenization via OpenAI <code>text-embedding-3-small</code> replacing naive keyword lookups with true semantic similarity.</span>
-              </li>
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">🗄️</span>
-                <span><strong>Chroma Vector Database:</strong> Vector store indexing chunked documents for rapid cosine distance queries and grounded context retrieval.</span>
-              </li>
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">🏗️</span>
-                <span><strong>Production Engineering Mindset:</strong> Phased pipeline development (Phase 2 completed, Phase 3 architecture improvements) with isolated Python <code>.venv</code> and strict hallucination mitigation.</span>
-              </li>
-            </ul>
-            <div class="project-tech-pills">
-              <span class="tech-pill">Python (.venv)</span>
-              <span class="tech-pill">Chroma Vector DB</span>
-              <span class="tech-pill">OpenAI text-embedding-3-small</span>
-              <span class="tech-pill">Semantic Search</span>
-              <span class="tech-pill">LLM Prompt Grounding</span>
-              <span class="tech-pill">FastAPI</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn-open-arch-modal" data-modal="modal-rag" aria-label="Explore RAG System Architecture">
-                <span>Explore AI Pipeline Flow</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <span class="project-metric">Zero Hallucination Grounding</span>
-            </div>
-          </article>
-
-          <!-- Project 3: Offline Tourist Emergency Assist -->
-          <article class="project-card" data-category="offline pwa systems">
-            <div class="project-card-header">
-              <div class="project-type-tag">Offline-First Life-Safety PWA</div>
-              <div class="project-date">Zero-Connectivity Ready</div>
-            </div>
-            <h3 class="project-title">Offline Tourist Emergency Assist</h3>
-            <p class="project-desc">
-              An offline-first global emergency response platform enabling travelers and tourists to instantly access verified emergency contacts (Police, Ambulance, Fire, Mountain/Coast Rescue, Consular Services) completely without internet connectivity.
-            </p>
-            <ul class="project-highlights-list">
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">🌐</span>
-                <span><strong>100% Offline Availability:</strong> Service Worker precaching &amp; local-first storage guarantee instantaneous offline access to 190+ countries in dead zones.</span>
-              </li>
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">🚨</span>
-                <span><strong>Instant One-Tap Direct Dialer:</strong> Seamless native phone dialer integration bypassing network latency when seconds count.</span>
-              </li>
-              <li class="project-highlight-item">
-                <span class="highlight-bullet">🗣️</span>
-                <span><strong>Multilingual Emergency SOS Cards:</strong> Localized emergency phrases and medical triage statements rendered offline in regional languages.</span>
-              </li>
-            </ul>
-            <div class="project-tech-pills">
-              <span class="tech-pill">PWA / Service Workers</span>
-              <span class="tech-pill">Cache API &amp; Storage</span>
-              <span class="tech-pill">JavaScript (ES6+)</span>
-              <span class="tech-pill">IndexedDB / LocalStorage</span>
-              <span class="tech-pill">HTML5 Geolocation</span>
-              <span class="tech-pill">Responsive Glass UI</span>
-            </div>
-            <div class="project-card-footer">
-              <button class="btn-open-arch-modal" data-modal="modal-tourist" aria-label="Explore Offline Tourist Architecture">
-                <span>View System Architecture</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <span class="project-metric">100% Offline | 190+ Nations</span>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SERVICES & EXPERTISE SECTION -->
-    <section class="services-section" id="services">
-      <div class="section-container">
-        
-        <div class="section-header-centered">
-          <span class="section-badge">EXPERTISE &amp; OFFERINGS</span>
-          <h2 class="section-heading">Architectural <span class="gold-accent-text">Services</span></h2>
-          <p class="section-subheading">
-            Delivering robust end-to-end engineering from conceptualization to cloud deployment.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          
-          <div class="service-box">
-            <div class="service-num">01</div>
-            <h3 class="service-title">Full Stack Web &amp; Mobile</h3>
-            <p class="service-desc">
-              Building ultra-responsive, resilient web applications leveraging React, Next.js, Node.js, and TypeScript. Optimized for high performance and smooth interactions.
-            </p>
-            <ul class="service-bullets">
-              <li>SPA / SSR Web Architectures</li>
-              <li>Type-safe Distributed APIs</li>
-              <li>State Management &amp; Micro-frontends</li>
-            </ul>
-          </div>
-
-          <div class="service-box">
-            <div class="service-num">02</div>
-            <h3 class="service-title">AI Agents &amp; Intelligent Workflows</h3>
-            <p class="service-desc">
-              Integrating state-of-the-art LLMs, multi-agent frameworks, semantic RAG systems, and custom automated tools to multiply operational throughput.
-            </p>
-            <ul class="service-bullets">
-              <li>Autonomous Multi-Agent Pipelines</li>
-              <li>Vector Databases &amp; Embeddings</li>
-              <li>AI Guardrails &amp; Structured Outputs</li>
-            </ul>
-          </div>
-
-          <div class="service-box">
-            <div class="service-num">03</div>
-            <h3 class="service-title">Cloud Infrastructure &amp; APIs</h3>
-            <p class="service-desc">
-              Architecting secure, containerized microservices with Docker, Kubernetes, automated CI/CD pipelines, and high-concurrency database schemas.
-            </p>
-            <ul class="service-bullets">
-              <li>Scalable REST &amp; GraphQL Services</li>
-              <li>PostgreSQL, MongoDB &amp; Redis Caching</li>
-              <li>Cloud Native Deployment &amp; Monitoring</li>
-            </ul>
-          </div>
-
-          <div class="service-box">
-            <div class="service-num">04</div>
-            <h3 class="service-title">Design-to-Code &amp; UI Systems</h3>
-            <p class="service-desc">
-              Bridging visual design intent with bulletproof frontend code. Crafting cohesive design token systems, micro-animations, and fluid responsive layouts.
-            </p>
-            <ul class="service-bullets">
-              <li>Design Tokens &amp; Component Libraries</li>
-              <li>Interactive Micro-Animations &amp; UX</li>
-              <li>Lighthouse 95+ Performance Scores</li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TECHNICAL STACK SECTION -->
-    <section class="skills-section" id="skills">
-      <div class="section-container">
-        
-        <div class="section-header-centered">
-          <span class="section-badge">TECHNICAL MATRIX</span>
-          <h2 class="section-heading">Engineered with <span class="gold-accent-text">Modern Technologies</span></h2>
-          <p class="section-subheading">
-            A battle-tested stack selected for performance, reliability, and developer velocity.
-          </p>
-        </div>
-
-        <div class="skills-categories-grid">
-          
-          <div class="skill-category-card">
-            <h4 class="category-heading">Languages &amp; Core</h4>
-            <div class="category-badges">
-              <span class="badge-item">TypeScript</span>
-              <span class="badge-item">JavaScript (ES6+)</span>
-              <span class="badge-item">Python</span>
-              <span class="badge-item">HTML5 / CSS3</span>
-              <span class="badge-item">SQL</span>
-            </div>
-          </div>
-
-          <div class="skill-category-card">
-            <h4 class="category-heading">Frontend &amp; Frameworks</h4>
-            <div class="category-badges">
-              <span class="badge-item">React.js</span>
-              <span class="badge-item">Next.js (App Router)</span>
-              <span class="badge-item">Tailwind CSS</span>
-              <span class="badge-item">Vanilla CSS Tokens</span>
-              <span class="badge-item">Redux Toolkit / Zustand</span>
-            </div>
-          </div>
-
-          <div class="skill-category-card">
-            <h4 class="category-heading">Backend &amp; Cloud</h4>
-            <div class="category-badges">
-              <span class="badge-item">Node.js / Express</span>
-              <span class="badge-item">FastAPI</span>
-              <span class="badge-item">PostgreSQL / MongoDB</span>
-              <span class="badge-item">Redis</span>
-              <span class="badge-item">Docker / CI/CD</span>
-            </div>
-          </div>
-
-          <div class="skill-category-card">
-            <h4 class="category-heading">AI &amp; Data Engineering</h4>
-            <div class="category-badges">
-              <span class="badge-item">LangChain / LangGraph</span>
-              <span class="badge-item">OpenAI / Anthropic APIs</span>
-              <span class="badge-item">Vector DBs (Qdrant/Pinecone)</span>
-              <span class="badge-item">RAG Architectures</span>
-              <span class="badge-item">Prompt Engineering</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT ME SECTION (LOGO-DRIVEN) -->
-    <section class="contact-section" id="contact">
-      <div class="section-container">
-        
-        <div class="contact-wrapper">
-          
-          <!-- Contact Left: Connect Channels & Logos -->
-          <div class="contact-channels-pane">
-            <span class="section-badge">GET IN TOUCH</span>
-            <h2 class="contact-headline">Let's Build Something <span class="gold-accent-text">Exceptional</span></h2>
-            <p class="contact-sub">
-              Whether you are looking to architect an AI-driven platform, build high-velocity full-stack products, or collaborate on impactful engineering challenges — my inbox and channels are open.
-            </p>
-
-            <!-- Social & Channel Logo Cards (NO plain text links, full rich logo badges) -->
-            <div class="contact-logo-cards-grid">
               
-              <!-- LinkedIn Logo Card (Direct User Vanity URL) -->
-              <a 
-                href="https://www.linkedin.com/in/ashish-kuntal-b7a897357" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="contact-logo-card linkedin-card"
-                id="contactLinkedInBtn"
-              >
-                <div class="card-logo-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="#0a66c2">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.67 1.67 0 1 0 0-3.34 1.67 1.67 0 0 0 0 3.34m1.39 9.74V9.93H5.07v8.57h2.78z"/>
-                  </svg>
-                </div>
-                <div class="card-logo-info">
-                  <div class="card-logo-platform">LinkedIn</div>
-                  <div class="card-logo-handle">ashish-kuntal-b7a897357</div>
-                </div>
-                <div class="card-arrow">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-                </div>
-              </a>
 
-              <!-- GitHub Logo Card -->
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="contact-logo-card github-card"
-                id="contactGitHubBtn"
-              >
-                <div class="card-logo-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="#ffffff">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
-                </div>
-                <div class="card-logo-info">
-                  <div class="card-logo-platform">GitHub</div>
-                  <div class="card-logo-handle">Explore Repositories</div>
-                </div>
-                <div class="card-arrow">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-                </div>
-              </a>
-
-              <!-- Direct Email Card -->
-              <div 
-                class="contact-logo-card email-card"
-                id="contactEmailBtn"
-                role="button"
-                tabindex="0"
-                title="Click to copy email address"
-              >
-                <div class="card-logo-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="#d4af37">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                  </svg>
-                </div>
-                <div class="card-logo-info">
-                  <div class="card-logo-platform">Direct Email</div>
-                  <div class="card-logo-handle" id="emailAddressDisplay">ashish.kuntal.dev@gmail.com</div>
-                </div>
-                <div class="card-action-badge" id="copyBadge">
-                  <span>Copy</span>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Fast Response Availability Notice -->
-            <div class="availability-callout">
-              <div class="callout-icon">⚡</div>
-              <div class="callout-text">
-                <strong>Fast Response:</strong> Usually replies within 24 hours. Open to full-time engineering roles, AI consulting, and architectural advisory.
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Contact Right: Engineering Studio Workspace Visual -->
-          <div class="contact-visual-pane">
-            <div class="workspace-card-frame">
-              <div class="workspace-image-container">
+              <!-- Profile Image Stage -->
+              <div class="profile-media-box">
+                <!-- User's Actual Portrait / Studio Photo -->
                 <img 
-                  src="assets/images/workspace_developer.jpg" 
-                  alt="Ashish Kuntal Engineering &amp; AI Studio Workspace" 
-                  class="workspace-img"
-                  loading="lazy"
+                  id="profileMainImage" 
+                  src="C:\Users\Dell\OneDrive\Desktop\workspace\portfolio\assets\images\me.jpeg" 
+                  alt="Ashish Kuntal —Software Developer" 
+                  class="profile-img"
+                  loading="eager"
                 />
-                <div class="workspace-gradient-overlay"></div>
-                
-                <!-- Floating Glassmorphic Workspace Badges -->
-                <div class="workspace-badge badge-focus">
-                  <span class="pulse-dot"></span>
-                  <span class="badge-label">Deep Architectural Focus</span>
-                </div>
 
-                <div class="workspace-badge badge-tech-status">
-                  <span class="tech-status-icon">⚡</span>
-                  <span class="badge-label">Active Development &amp; AI Systems</span>
-                </div>
+                <!-- Image Glare & Gradient Wash for Depth -->
+                <div class="profile-glare-overlay"></div>
+                <div class="profile-gradient-shadow"></div>
+
+
               </div>
 
-              <!-- Workspace Footer Info -->
-              <div class="workspace-card-footer">
-                <p class="workspace-quote">
-                  "Turning complex first-principles architecture into robust, production-grade software."
-                </p>
-                <div class="workspace-signature-tag">
-                  <span class="tag-name">ASHISH KUNTAL</span>
-                  <span class="tag-badge">STUDIO</span>
+              <!-- Profile Card Footnote -->
+              <div class="profile-card-footer">
+                <div class="footer-identity-meta">
+                  <h3 class="footer-name">Ashish Kuntal</h3>
+                  <p class="footer-title">Full-Stack &amp; AI Systems Engineer</p>
                 </div>
+
               </div>
+
+            </div>
+
+            <!-- Decorative Coordinate Wireframe behind card -->
+            <div class="profile-backdrop-wireframe" aria-hidden="true">
+              <span class="wire-cross c-top-left"></span>
+              <span class="wire-cross c-top-right"></span>
+              <span class="wire-cross c-bottom-left"></span>
+              <span class="wire-cross c-bottom-right"></span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         SKILL SET SECTION (ARSENAL)
+         ======================================================================= -->
+    <section class="stage-section preview-stage-section" id="skills" data-stage-title="SKILL SET" data-next-stage="PROJECTS">
+      
+      <div class="preview-stage-container">
+        <div class="preview-header-block">
+          <h2 class="preview-heading">Production Stack &amp; Infrastructure</h2>
+          <p class="preview-subtext">
+            Engineered to support distributed AI models, sub-second vector search, real-time audio/video streaming, and resilient offline databases.
+          </p>
+        </div>
+
+        <!-- Dedicated Programming Languages Block (Compact & Punchy) -->
+        <div class="languages-block-card">
+          <div class="languages-card-header">
+            <div class="lang-header-left">
+              <span class="skill-tag-code">CORE SYNTAX &amp; RUNTIMES</span>
+              <h3 class="languages-block-title">Programming Languages</h3>
+            </div>
+            <span class="skill-status-pill">7 TECHNOLOGIES</span>
+          </div>
+          <div class="languages-items-grid">
+            <!-- JavaScript -->
+            <div class="language-item-badge">
+              <div class="lang-item-top">
+                <span class="lang-code-dot"></span>
+                <span class="lang-name">JavaScript</span>
+              </div>
+              <span class="lang-meta">ESNext / V8 / Node</span>
+            </div>
+
+            <!-- TypeScript -->
+            <div class="language-item-badge">
+              <div class="lang-item-top">
+                <span class="lang-code-dot"></span>
+                <span class="lang-name">TypeScript</span>
+              </div>
+              <span class="lang-meta">Strict Types &amp; Generics</span>
+            </div>
+
+            <!-- Python -->
+            <div class="language-item-badge">
+              <div class="lang-item-top">
+                <span class="lang-code-dot"></span>
+                <span class="lang-name">Python</span>
+              </div>
+              <span class="lang-meta">PyTorch / FastAPI</span>
+            </div>
+
+            <!-- CSS -->
+            <div class="language-item-badge">
+              <div class="lang-item-top">
+                <span class="lang-code-dot"></span>
+                <span class="lang-name">CSS</span>
+              </div>
+              <span class="lang-meta">CSS3 &amp; Animations</span>
+            </div>
+
+            <!-- HTML -->
+            <div class="language-item-badge">
+              <div class="lang-item-top">
+                <span class="lang-code-dot"></span>
+                <span class="lang-name">HTML</span>
+              </div>
+              <span class="lang-meta">Semantic HTML5 &amp; PWA</span>
+            </div>
+
+            <!-- SQL -->
+            <div class="language-item-badge">
+              <div class="lang-item-top">
+                <span class="lang-code-dot"></span>
+                <span class="lang-name">SQL</span>
+              </div>
+              <span class="lang-meta">Relational Queries</span>
+            </div>
+
+            <!-- MQL -->
+            <div class="language-item-badge">
+              <div class="lang-item-top">
+                <span class="lang-code-dot"></span>
+                <span class="lang-name">MQL</span>
+              </div>
+              <span class="lang-meta">MongoDB Query Language</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure & Systems Grid (Compact & Sleek) -->
+        <div class="core-skills-spotlight-grid">
+          
+          <!-- Skill: WebSocket -->
+          <div class="skill-spotlight-card">
+            <div class="skill-card-top">
+              <span class="skill-tag-code">REAL-TIME PROTOCOL</span>
+              <span class="skill-status-pill">&lt;10MS</span>
+            </div>
+            <h3 class="skill-card-title">WebSocket</h3>
+            <p class="skill-card-desc">
+              Full-duplex persistent bidirectional event streams, binary data framing, and sub-10ms state synchronization.
+            </p>
+            <div class="skill-card-tokens">
+              <span>Socket.io</span>
+              <span>Event Streams</span>
+              <span>Bi-Directional</span>
+            </div>
+          </div>
+
+          <!-- Skill: WebRTC -->
+          <div class="skill-spotlight-card is-featured-skill">
+            <div class="skill-card-top">
+              <span class="skill-tag-code">PEER-TO-PEER MEDIA</span>
+              <span class="skill-status-pill">P2P MESH</span>
+            </div>
+            <h3 class="skill-card-title">WebRTC</h3>
+            <p class="skill-card-desc">
+              Low-latency peer-to-peer audio/video streaming, NAT traversal (STUN/TURN), and real-time DataChannels.
+            </p>
+            <div class="skill-card-tokens">
+              <span>P2P Mesh</span>
+              <span>STUN/TURN</span>
+              <span>DataChannels</span>
+            </div>
+          </div>
+
+          <!-- Skill: Docker -->
+          <div class="skill-spotlight-card">
+            <div class="skill-card-top">
+              <span class="skill-tag-code">CONTAINERIZATION</span>
+              <span class="skill-status-pill">PROD-READY</span>
+            </div>
+            <h3 class="skill-card-title">Docker</h3>
+            <p class="skill-card-desc">
+              Containerized microservices orchestration, multi-stage builds, and isolated production environments.
+            </p>
+            <div class="skill-card-tokens">
+              <span>Compose</span>
+              <span>Microservices</span>
+              <span>Layer Caching</span>
+            </div>
+          </div>
+
+          <!-- Skill: Redis -->
+          <div class="skill-spotlight-card">
+            <div class="skill-card-top">
+              <span class="skill-tag-code">IN-MEMORY DATA</span>
+              <span class="skill-status-pill">CACHE / QUEUES</span>
+            </div>
+            <h3 class="skill-card-title">Redis</h3>
+            <p class="skill-card-desc">
+              High-throughput in-memory caching, pub/sub messaging channels, rate limiting, and real-time session stores.
+            </p>
+            <div class="skill-card-tokens">
+              <span>Pub/Sub</span>
+              <span>Caching</span>
+              <span>Rate Limiting</span>
+            </div>
+          </div>
+
+          <!-- Skill: RAG -->
+          <div class="skill-spotlight-card is-featured-skill">
+            <div class="skill-card-top">
+              <span class="skill-tag-code">INTELLIGENCE</span>
+              <span class="skill-status-pill">CORE SPECIALTY</span>
+            </div>
+            <h3 class="skill-card-title">RAG Architecture</h3>
+            <p class="skill-card-desc">
+              Dense vector embeddings, hybrid semantic retrieval, context compression, and hallucination guardrails.
+            </p>
+            <div class="skill-card-tokens">
+              <span>Vector DBs</span>
+              <span>Embeddings</span>
+              <span>Hybrid Search</span>
+            </div>
+          </div>
+
+          <!-- Skill: MongoDB -->
+          <div class="skill-spotlight-card">
+            <div class="skill-card-top">
+              <span class="skill-tag-code">DOCUMENT DATABASE</span>
+              <span class="skill-status-pill">NOSQL</span>
+            </div>
+            <h3 class="skill-card-title">MongoDB</h3>
+            <p class="skill-card-desc">
+              Flexible NoSQL document modeling, high-performance aggregation pipelines, and resilient distributed persistence.
+            </p>
+            <div class="skill-card-tokens">
+              <span>Aggregations</span>
+              <span>Atlas Clusters</span>
+              <span>Indexing</span>
             </div>
           </div>
 
         </div>
-
       </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <!-- Forward-Facing Majestic Soaring Avian in Footer -->
-        <div class="footer-avian-stage">
-          <div class="avian-flyer footer-avian-flyer">
-            <svg class="avian-svg" viewBox="0 0 120 90" fill="none">
-              <g class="avian-tail-feathers">
-                <path d="M 57 58 L 60 84 L 63 58 Z" fill="#94a3b8" opacity="0.85" />
-                <path d="M 55 58 L 52 82 L 58 60 Z" fill="#cbd5e1" />
-                <path d="M 65 58 L 68 82 L 62 60 Z" fill="#cbd5e1" />
-              </g>
-              <g class="avian-wing-left">
-                <path d="M 50 32 C 36 26, 22 24, 4 28 C 10 32, 24 33, 40 38 Z" fill="#ffffff" />
-                <path d="M 48 34 C 32 29, 18 31, 2 37 C 10 40, 24 40, 42 42 Z" fill="#cbd5e1" />
-                <path d="M 46 36 C 30 35, 16 40, 3 47 C 12 48, 26 46, 44 45 Z" fill="#94a3b8" />
-              </g>
-              <g class="avian-wing-right">
-                <path d="M 70 32 C 84 26, 98 24, 116 28 C 110 32, 96 33, 80 38 Z" fill="#ffffff" />
-                <path d="M 72 34 C 88 29, 102 31, 118 37 C 110 40, 96 40, 78 42 Z" fill="#cbd5e1" />
-                <path d="M 74 36 C 90 35, 104 40, 117 47 C 108 48, 94 46, 76 45 Z" fill="#94a3b8" />
-              </g>
-              <g class="avian-torso">
-                <path d="M 54 28 C 50 34, 48 46, 52 60 C 56 66, 64 66, 68 60 C 72 46, 70 34, 66 28 C 63 24, 57 24, 54 28 Z" fill="#d4af37" />
-              </g>
-              <g class="avian-head">
-                <path d="M 54 26 C 53 18, 56 12, 60 12 C 64 12, 67 18, 66 26 C 64 28, 56 28, 54 26 Z" fill="#ffffff" />
-                <polygon points="58,16 62,16 60,6" fill="#f59e0b" />
-                <circle cx="56.5" cy="18" r="1.4" fill="#09090b" />
-                <circle cx="63.5" cy="18" r="1.4" fill="#09090b" />
-              </g>
-            </svg>
+    </section>
+
+    <!-- =======================================================================
+         PROJECTS SECTION (COMPACT 2x2 FLAGSHIP GRID)
+         ======================================================================= -->
+    <section class="stage-section preview-stage-section" id="projects" data-stage-title="PROJECTS" data-next-stage="LET'S TALK">
+      
+      <div class="preview-stage-container">
+        <div class="preview-header-block">
+          
+          <h2 class="preview-heading">Four Flagship Works</h2>
+          <p class="preview-subtext">
+            High-craft systems across astrophysics AI, enterprise retrieval, real-time WebRTC, and offline life-safety.
+          </p>
+        </div>
+
+        <!-- Four Flagship Projects in Compact 2x2 Grid with 1-2 Line Explanations -->
+        <div class="compact-projects-grid">
+          
+          <!-- PROJECT 01: COSMO-AI -->
+          <article class="compact-project-card" id="project-cosmo-ai">
+            <div class="compact-card-header">
+              <span class="project-category-badge">ASTROPHYSICS &amp; AI</span>
+              <span class="project-readiness-pill">PROD INFERENCE</span>
+            </div>
+            <h3 class="compact-project-title">cosmo-ai</h3>
+            <p class="compact-project-desc">
+              Deep learning platform analyzing cosmological survey data and spectral redshift matrices to model cosmic structure formation and detect gravitational lensing anomalies.
+            </p>
+            <div class="compact-project-tags">
+              <span>PyTorch</span>
+              <span>FastAPI</span>
+              <span>FITS Spectrometry</span>
+              <span>N-Body Sim</span>
+              <span>Docker</span>
+            </div>
+            <div class="compact-card-footer">
+              <span class="compact-metric">Latency: <strong>&lt;45ms</strong></span>
+              <a href="#contact" class="compact-card-link">Discuss Specs ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: ENTERPRISE RAG -->
+          <article class="compact-project-card" id="project-rag">
+            <div class="compact-card-header">
+              <span class="project-category-badge">KNOWLEDGE RETRIEVAL</span>
+              <span class="project-readiness-pill">PRODUCTION RAG</span>
+            </div>
+            <h3 class="compact-project-title">Enterprise RAG Engine</h3>
+            <p class="compact-project-desc">
+              Production-grade retrieval pipeline blending dense ChromaDB vector search with BM25 lexical ranking and cross-encoder guardrails for sub-second grounded answers.
+            </p>
+            <div class="compact-project-tags">
+              <span>RAG</span>
+              <span>Vector DB</span>
+              <span>ChromaDB</span>
+              <span>Hybrid Search</span>
+              <span>Redis Cache</span>
+            </div>
+            <div class="compact-card-footer">
+              <span class="compact-metric">Groundedness: <strong>99.4%</strong></span>
+              <a href="#contact" class="compact-card-link">Discuss Specs ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: COMUGLE -->
+          <article class="compact-project-card" id="project-comugle">
+            <div class="compact-card-header">
+              <span class="project-category-badge">GLOBAL REAL-TIME WEBRTC</span>
+              <span class="project-readiness-pill">LIVE NETWORK</span>
+            </div>
+            <h3 class="compact-project-title">comugle</h3>
+            <p class="compact-project-desc">
+              Worldwide university student collaboration network delivering sub-50ms peer-to-peer WebRTC video chat, Redis pub/sub signaling, and campus domain verification.
+            </p>
+            <div class="compact-project-tags">
+              <span>WebRTC</span>
+              <span>Socket.io</span>
+              <span>Redis Pub/Sub</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="compact-card-footer">
+              <span class="compact-metric">P2P Media: <strong>&lt;50ms</strong></span>
+              <a href="#contact" class="compact-card-link">Discuss Specs ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: EMERGENCY HELPLINE NAVIGATION -->
+          <article class="compact-project-card" id="project-emergency-helpline">
+            <div class="compact-card-header">
+              <span class="project-category-badge">OFFLINE LIFE-SAFETY</span>
+              <span class="project-readiness-pill">OFFLINE PWA</span>
+            </div>
+            <h3 class="compact-project-title">Emergency Helpline Navigation</h3>
+            <p class="compact-project-desc">
+              Offline-first PWA caching verified emergency dispatch numbers across 190+ countries for travelers with zero cellular data, featuring one-tap hardware dialing and multilingual SOS.
+            </p>
+            <div class="compact-project-tags">
+              <span>Offline-First</span>
+              <span>PWA Service Worker</span>
+              <span>IndexedDB</span>
+              <span>Hardware Dialer</span>
+              <span>190+ Countries</span>
+            </div>
+            <div class="compact-card-footer">
+              <span class="compact-metric">Reliability: <strong>100% Zero-Data</strong></span>
+              <a href="#contact" class="compact-card-link">Discuss Specs ↗</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         LET'S TALK SECTION (CONTACT)
+         ======================================================================= -->
+    <section class="stage-section preview-stage-section" id="contact" data-stage-title="LET'S TALK" data-next-stage="MISSION COMPLETE">
+      
+      <div class="preview-stage-container">
+        <div class="contact-card-box">
+          
+          <h2 class="contact-main-heading">Let's build something exceptional together.</h2>
+          <p class="contact-subtext">
+            Currently accepting select freelance client contracts, AI system architectural consults, and high-velocity engineering engagements.
+          </p>
+
+          <div class="contact-direct-channels">
+            <a href="mailto:[ashishchaudhary8a@gmail.com]"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-channel-pill">
+              <span class="channel-icon">✉</span>
+              <span class="channel-meta">
+                <span class="channel-label">Gmail</span>
+              </span>
+              <span class="channel-arrow">↗</span>
+            </a>
+
+            <a href="https://github.com/ashishchaudhary8a-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-channel-pill">
+              <span class="channel-icon">⌥</span>
+              <span class="channel-meta">
+                <span class="channel-label">Github</span>
+              </span>
+              <span class="channel-arrow">↗</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ashish-kuntal-b7a897357"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-channel-pill">
+              <span class="channel-icon">◈</span>
+              <span class="channel-meta">
+                <span class="channel-label">LinkedIn</span>
+              </span>
+              <span class="channel-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Bottom Return Link -->
+          <div style="margin-top: 36px; text-align: center;">
+            <a href="#hero" class="dock-target-item" >
+              <span class = "text-white">Return to Overview ↑</span>
+            </a>
           </div>
         </div>
-        <div class="footer-brand-title">ASHISH KUNTAL</div>
-        <div class="footer-brand-desc">Architected with Precision, Human Logic &amp; AI Intelligence.</div>
       </div>
 
-      <div class="footer-links">
-        <a href="#hero">About</a>
-        <a href="#philosophy">Brain &amp; Tech</a>
-        <a href="#works">Works</a>
-        <a href="https://www.linkedin.com/in/ashish-kuntal-b7a897357" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-        <a href="#contact">Contact</a>
+    </section>
+
+    <!-- Global Page Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        
+        
       </div>
+    </footer>
 
-      <div class="footer-copy">
-        &copy; <span id="currentYear">2026</span> Ashish Kuntal. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <!-- ================================================================= -->
-  <!-- INTERACTIVE SYSTEM ARCHITECTURE MODALS                            -->
-  <!-- ================================================================= -->
-
-  <!-- Modal 1: Comugle -->
-  <div class="arch-modal-overlay" id="modal-comugle" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="arch-modal-container">
-      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      <div class="modal-header">
-        <span class="modal-badge">Real-Time System Architecture</span>
-        <h3 class="modal-title">Comugle — Real-Time Matchmaking Platform</h3>
-        <p class="modal-subtitle">
-          Full-stack real-time communication platform featuring low-latency user matchmaking, bi-directional Socket.io communication, authentication, online-user tracking, live telemetry, and automated moderation logic.
-        </p>
-      </div>
-
-      <!-- Pipeline Visual -->
-      <div class="arch-pipeline-visual">
-        <div class="pipeline-title">
-          <span>⚡</span>
-          <span>End-to-End Real-Time Event &amp; Matchmaking Lifecycle</span>
-        </div>
-        <div class="pipeline-nodes-flow">
-          <div class="p-node">React Client</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">JWT / OTP Handshake</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node highlight">In-Memory Match Queue</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node highlight">Socket.io Room Pair</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">Moderation Ratio Filter</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">broadcastStats Telemetry</div>
-        </div>
-      </div>
-
-      <!-- Architecture Breakdown Grid -->
-      <div class="arch-details-grid">
-        <div class="arch-section-box">
-          <h4 class="arch-section-heading"><span>⚙️</span> In-Memory State &amp; Queue Design</h4>
-          <ul class="arch-points-list">
-            <li><strong><code>queue</code></strong>: High-velocity in-memory array maintaining active unmatched users for instantaneous sub-50ms peer pairings.</li>
-            <li><strong><code>otpStore</code></strong>: Ephemeral cache tracking Nodemailer one-time verification tokens with automated TTL invalidation.</li>
-            <li><strong><code>onlineUsers</code></strong>: In-memory hash map tracking socket IDs, active room descriptors, and connection heartbeat health.</li>
-          </ul>
-        </div>
-
-        <div class="arch-section-box">
-          <h4 class="arch-section-heading"><span>🛡️</span> Moderation &amp; Telemetry Engines</h4>
-          <ul class="arch-points-list">
-            <li><strong>Automated Ban Logic</strong>: Triggers automatic 7-day access bans when report ratio reaches 0.6 (with min 5 completed connections).</li>
-            <li><strong><code>broadcastStats</code></strong>: Real-time broadcast engine publishing live active match volumes and cluster status to clients.</li>
-            <li><strong>Cloud Deployment</strong>: Node.js/Express backend orchestrated on Render; high-performance frontend deployed on Vercel.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Verified Metrics Bar -->
-      <div class="arch-metrics-bar">
-        <span class="arch-metric-pill">Socket Latency: <strong>&lt;50ms</strong></span>
-        <span class="arch-metric-pill">Backend: <strong>Node.js / Express / Socket.io</strong></span>
-        <span class="arch-metric-pill">Database: <strong>MongoDB &amp; Mongoose</strong></span>
-        <span class="arch-metric-pill">Deployment: <strong>Render + Vercel</strong></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2: Production-Oriented RAG System -->
-  <div class="arch-modal-overlay" id="modal-rag" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="arch-modal-container">
-      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      <div class="modal-header">
-        <span class="modal-badge">Semantic AI Architecture</span>
-        <h3 class="modal-title">Production-Oriented RAG System</h3>
-        <p class="modal-subtitle">
-          A production-oriented Retrieval-Augmented Generation system that processes documents, converts content into semantic vector representations, retrieves relevant context using a vector store, and generates strictly grounded responses.
-        </p>
-      </div>
-
-      <!-- Pipeline Visual -->
-      <div class="arch-pipeline-visual">
-        <div class="pipeline-title">
-          <span>🧠</span>
-          <span>End-to-End Semantic Ingestion &amp; Context Retrieval Pipeline</span>
-        </div>
-        <div class="pipeline-nodes-flow">
-          <div class="p-node">Source Documents</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">Chunking &amp; Preparation</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node highlight">text-embedding-3-small</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node highlight">Chroma Vector Store</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">Semantic Distance Retrieval</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">Grounded Context LLM</div>
-        </div>
-      </div>
-
-      <!-- Architecture Breakdown Grid -->
-      <div class="arch-details-grid">
-        <div class="arch-section-box">
-          <h4 class="arch-section-heading"><span>📐</span> High-Dimensional Semantic Retrieval</h4>
-          <ul class="arch-points-list">
-            <li><strong>Numerical Vector Embeddings</strong>: Converts textual content into semantic dense embeddings via OpenAI <code>text-embedding-3-small</code>, enabling genuine conceptual understanding over rigid keyword search.</li>
-            <li><strong>Chroma Vector Database</strong>: Highly efficient vector store executing cosine similarity metrics to locate exact relevant contextual chunks.</li>
-            <li><strong>Hallucination Guardrails</strong>: Context injection boundary ensuring LLM answers strictly derive from retrieved document passages.</li>
-          </ul>
-        </div>
-
-        <div class="arch-section-box">
-          <h4 class="arch-section-heading"><span>🏗️</span> Production Engineering &amp; Isolation</h4>
-          <ul class="arch-points-list">
-            <li><strong>Phased Architecture</strong>: Built with a disciplined phased approach (Phase 2 completed, Phase 3 architecture improvements) to prevent architectural debt.</li>
-            <li><strong>Environment Isolation</strong>: Dedicated Python <code>.venv</code> environment ensuring strictly locked dependencies and conflict-free execution.</li>
-            <li><strong>Production Diagnostics</strong>: Systematically diagnosed failure modes, token bottlenecks, and context window limits to build toward enterprise resilience.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Verified Metrics Bar -->
-      <div class="arch-metrics-bar">
-        <span class="arch-metric-pill">Vector DB: <strong>Chroma Vector Store</strong></span>
-        <span class="arch-metric-pill">Embedding Model: <strong>text-embedding-3-small</strong></span>
-        <span class="arch-metric-pill">Environment: <strong>Python (.venv)</strong></span>
-        <span class="arch-metric-pill">Status: <strong>Phase 2 Done / Phase 3 Arch</strong></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3: Offline Tourist Emergency Assist -->
-  <div class="arch-modal-overlay" id="modal-tourist" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="arch-modal-container">
-      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      <div class="modal-header">
-        <span class="modal-badge">Offline-First Life-Safety Platform</span>
-        <h3 class="modal-title">Offline Tourist Emergency Assist</h3>
-        <p class="modal-subtitle">
-          An offline-first global emergency response platform enabling travelers and tourists to instantly access verified emergency contacts (Police, Ambulance, Fire, Mountain/Coast Rescue, Consular Services) completely without internet connectivity.
-        </p>
-      </div>
-
-      <!-- Pipeline Visual -->
-      <div class="arch-pipeline-visual">
-        <div class="pipeline-title">
-          <span>🌐</span>
-          <span>Zero-Connectivity Offline Resolution Pipeline</span>
-        </div>
-        <div class="pipeline-nodes-flow">
-          <div class="p-node">Country / Region Query</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node highlight">Service Worker Cache API</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node highlight">Local IndexedDB Store</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">Instant Direct Dialer</div>
-          <span class="p-arrow">→</span>
-          <div class="p-node">Multilingual SOS Triage</div>
-        </div>
-      </div>
-
-      <!-- Architecture Breakdown Grid -->
-      <div class="arch-details-grid">
-        <div class="arch-section-box">
-          <h4 class="arch-section-heading"><span>📡</span> 100% Offline-First Architecture</h4>
-          <ul class="arch-points-list">
-            <li><strong>Zero Internet Requirement</strong>: Operates completely offline with local-first persistent caching via Service Workers and IndexedDB/LocalStorage.</li>
-            <li><strong>190+ Countries Indexed</strong>: Comprehensive verified hotlines for Police, Ambulance, Fire, Coast Guard, Mountain Rescue, and Foreign Consulates.</li>
-            <li><strong>Dead-Zone Optimization</strong>: Specifically engineered for remote trekking trails, international transit hubs, and cellular blackout zones.</li>
-          </ul>
-        </div>
-
-        <div class="arch-section-box">
-          <h4 class="arch-section-heading"><span>🚨</span> Life-Safety UX &amp; Multilingual Triage</h4>
-          <ul class="arch-points-list">
-            <li><strong>Instant One-Tap Direct Dialer</strong>: Native phone URI scheme triggers hardware calling instantly with zero delay.</li>
-            <li><strong>Offline Multilingual SOS Phrases</strong>: Critical medical distress, police help, and allergy statements translated locally for non-English jurisdictions.</li>
-            <li><strong>Ultra-Low Footprint</strong>: Lightweight vanilla PWA client achieving instant sub-100ms boot times on low-end devices.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Verified Metrics Bar -->
-      <div class="arch-metrics-bar">
-        <span class="arch-metric-pill">Offline Reliability: <strong>100% Zero-Data Needed</strong></span>
-        <span class="arch-metric-pill">Coverage: <strong>190+ Countries Verified</strong></span>
-        <span class="arch-metric-pill">Tech: <strong>PWA / Service Workers / Cache API</strong></span>
-        <span class="arch-metric-pill">Storage: <strong>IndexedDB / Local-First</strong></span>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <!-- Script File -->
   <script src="script.js"></script>
 </body>
 </html>
+
